@@ -1,0 +1,23 @@
+MoveitJoints joints_input_01
+MoveitJoints joints_input_02
+MoveitJoints joints_input_03
+
+geometry_msgs/Pose target01
+geometry_msgs/Pose target02
+geometry_msgs/Pose target03
+geometry_msgs/Pose target04
+geometry_msgs/Pose target05
+geometry_msgs/Pose target06
+geometry_msgs/Pose target07
+geometry_msgs/Pose target08
+geometry_msgs/Pose target09
+geometry_msgs/Pose target10
+geometry_msgs/Pose target11
+geometry_msgs/Pose target12
+
+---
+moveit_msgs/RobotTrajectory[] trajectories_01
+moveit_msgs/RobotTrajectory[] trajectories_02
+moveit_msgs/RobotTrajectory[] trajectories_03
+
+

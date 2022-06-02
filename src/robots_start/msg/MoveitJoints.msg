@@ -1,0 +1,9 @@
+float64[6] joints_input_01
+float64[6] joints_input_02
+float64[6] joints_input_03
+geometry_msgs/Pose bms
+geometry_msgs/Pose place_pose
+geometry_msgs/Pose batterylock1
+geometry_msgs/Pose batterylock2
+geometry_msgs/Pose batterylock3
+geometry_msgs/Pose batterylock4

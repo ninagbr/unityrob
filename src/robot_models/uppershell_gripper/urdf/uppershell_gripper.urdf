@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="uppershell_gripper">
+  <link
+    name="schunk_base_link">
+    <inertial>
+      <origin
+        xyz="-0.0063124 -0.023292 0.07766"
+        rpy="0 0 0" />
+      <mass
+        value="0.00053706" />
+      <inertia
+        ixx="2.7117E-07"
+        ixy="1.6255E-10"
+        ixz="1.4401E-09"
+        iyy="8.1505E-07"
+        iyz="-4.6953E-10"
+        izz="7.4795E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://uppershell_gripper/meshes/schunk_base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://uppershell_gripper/meshes/schunk_base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="scraper_link">
+    <inertial>
+      <origin
+        xyz="-1.4954E-08 0.008625 -0.0088599"
+        rpy="0 0 0" />
+      <mass
+        value="0.15272" />
+      <inertia
+        ixx="2.0791E-05"
+        ixy="3.4294E-11"
+        ixz="2.7422E-11"
+        iyy="2.8069E-05"
+        iyz="-3.0296E-07"
+        izz="1.9918E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://uppershell_gripper/meshes/scraper_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.52941 0.54902 0.54902 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://uppershell_gripper/meshes/scraper_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="scraper_joint"
+    type="prismatic">
+    <origin
+      xyz="-0.039301 -0.077913 0.035164"
+      rpy="3.1416 0 -1.5708" />
+    <parent
+      link="schunk_base_link" />
+    <child
+      link="scraper_link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0.00"
+      upper="0.03"
+      effort="10"
+      velocity="100" />
+  </joint>
+  <link
+    name="long_bracket_link">
+    <inertial>
+      <origin
+        xyz="-8.5813E-09 0.04454 0.014987"
+        rpy="0 0 0" />
+      <mass
+        value="0.3177" />
+      <inertia
+        ixx="0.00021945"
+        ixy="3.8799E-11"
+        ixz="-2.4923E-11"
+        iyy="0.00018897"
+        iyz="6.6364E-05"
+        izz="5.3885E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://uppershell_gripper/meshes/long_bracket_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://uppershell_gripper/meshes/long_bracket_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="long_bracket_joint"
+    type="prismatic">
+    <origin
+      xyz="-0.005601 -0.077913 0.00026396"
+      rpy="1.5708 0 1.5708" />
+    <parent
+      link="schunk_base_link" />
+    <child
+      link="long_bracket_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0.00"
+      upper="0.03"
+      effort="10"
+      velocity="100" />
+  </joint>
+</robot>

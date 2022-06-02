@@ -1,0 +1,8 @@
+prefix=/home/nina/ws_unity/install
+
+Name: robots_start
+Description: Description of robots_start
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: 

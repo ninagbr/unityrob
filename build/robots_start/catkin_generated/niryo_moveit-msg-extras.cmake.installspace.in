@@ -1,0 +1,2 @@
+set(niryo_moveit_MESSAGE_FILES "msg/Abb01_joints.msg;msg/Battery_positions.msg;msg/NiryoMoveitJoints.msg;msg/NiryoTrajectory.msg")
+set(niryo_moveit_SERVICE_FILES "srv/MoverService.srv")

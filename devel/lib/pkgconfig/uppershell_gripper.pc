@@ -1,0 +1,8 @@
+prefix=/home/nina/ws_unity/devel
+
+Name: uppershell_gripper
+Description: Description of uppershell_gripper
+Version: 1.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

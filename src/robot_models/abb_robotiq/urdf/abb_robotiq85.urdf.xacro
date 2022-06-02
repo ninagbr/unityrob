@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://wiki.ros.org/xacro" name="abbrobotiq" >
+  <xacro:arg name="transmission_hw_interface" default="hardware_interface/PositionJointInterface"/>  
+
+  <!-- common stuff -->
+
+  <!-- ur5 xacro -->
+  <xacro:include filename="$(find abb_irb4400_support)/urdf/irb4400l_30_243_macro.xacro" />
+  <!-- robotiq 85 gripper xacro -->
+  <xacro:include filename="$(find robotiq_description)/urdf/robotiq_85_gripper.urdf.xacro" />
+
+  <!-- arm + gripper -->
+  <xacro:abb_irb4400l_30_243 prefix="" />
+  <xacro:robotiq_85_gripper prefix="" parent="tool0" >
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+  </xacro:robotiq_85_gripper>
+
+  <!-- virtual joint abb -->
+  <link name="world" />
+  <joint name="robot_virtual_joint" type="fixed">
+   <parent link="world" /> 
+    <child link = "base_link" />
+   <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+
+
+</robot>

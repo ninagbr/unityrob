@@ -1,0 +1,2 @@
+set(robots_start_MESSAGE_FILES "/home/nina/ws_unity/src/robots_start/msg/MoveitJoints.msg;/home/nina/ws_unity/src/robots_start/msg/NiryoTrajectory.msg;/home/nina/ws_unity/src/robots_start/msg/RobotTrajectory.msg")
+set(robots_start_SERVICE_FILES "/home/nina/ws_unity/src/robots_start/srv/MoverService.srv;/home/nina/ws_unity/src/robots_start/srv/MoverService03.srv;/home/nina/ws_unity/src/robots_start/srv/MoverService1.srv")

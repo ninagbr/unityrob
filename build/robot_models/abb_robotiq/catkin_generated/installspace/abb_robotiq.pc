@@ -1,0 +1,8 @@
+prefix=/home/nina/ws_unity/install
+
+Name: abb_robotiq
+Description: Description of abb_robotiq
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

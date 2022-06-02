@@ -1,0 +1,68 @@
+<launch>
+
+
+<!-- starts the TCP Endpoint connection in order to connect to Unity -->
+	<arg name="tcp_ip" default="127.0.0.1"/>
+	<arg name="tcp_port" default="10000"/>	
+	<node name="server_endpoint" pkg="ros_tcp_endpoint" type="default_server_endpoint.py" 			args="--wait" output="screen" respawn="true">
+		<param name="tcp_ip" type="string" value="$(arg tcp_ip)"/>
+		<param name="tcp_port" type="int" value="$(arg tcp_port)"/>
+	</node>
+
+<!-- PACK DISASSEMBLY -->
+<!-- Define namespaces for the robots and launch robot descriptions -->
+<group ns = "abb01">	
+	<include file="$(find abb_moveit_config)/launch/demo.launch" >
+	</include>
+</group>
+<group ns = "abb02">	
+	<include file="$(find abb_moveit_config)/launch/demo.launch" >
+	</include>
+</group>
+
+<group ns = "abb03">	
+	<include file="$(find abb_moveit_config)/launch/demo.launch" >
+	</include>
+</group>
+
+<!-- run planner.py -->    
+<node name="planner" pkg="robots_start" type="planner.py" args="--wait" output="screen" /> 
+
+
+
+
+<!-- DISCHARGE STATION (MODULES) -->
+<group ns = "abb04">	
+	<include file="$(find abb_moveit_config)/launch/demo.launch" >
+	</include>
+</group>
+
+  	
+<node name="Discharge" pkg="robots_start" type="Discharge.py" args="--wait" output="screen" /> 
+
+
+
+
+	
+
+<!-- MODULE STATION 3 -->
+<group ns = "irb6660_03">	
+	<include file="$(find irb6660_moveit_config)/launch/demo.launch" >
+	</include>
+</group>
+<group ns = "ur5_05">	
+	<include file="$(find ur5customnew_moveit_config)/launch/demo.launch" >
+	</include>
+</group>
+
+<group ns = "ur5_06">	
+	<include file="$(find ur5customnew_moveit_config)/launch/demo.launch" >
+	</include>
+</group>
+
+  	
+<node name="modulePlanner03" pkg="robots_start" type="modulePlanner03.py" args="--wait" output="screen" /> 
+
+  
+
+</launch>

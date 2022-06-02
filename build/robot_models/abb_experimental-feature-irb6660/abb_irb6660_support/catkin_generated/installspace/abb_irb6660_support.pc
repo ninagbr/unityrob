@@ -1,0 +1,8 @@
+prefix=/home/nina/ws_unity/install
+
+Name: abb_irb6660_support
+Description: Description of abb_irb6660_support
+Version: 0.1.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

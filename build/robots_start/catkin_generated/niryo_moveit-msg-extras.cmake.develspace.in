@@ -1,0 +1,2 @@
+set(niryo_moveit_MESSAGE_FILES "/home/nina/ws_unity/src/robots_start/msg/Abb01_joints.msg;/home/nina/ws_unity/src/robots_start/msg/Battery_positions.msg;/home/nina/ws_unity/src/robots_start/msg/NiryoMoveitJoints.msg;/home/nina/ws_unity/src/robots_start/msg/NiryoTrajectory.msg")
+set(niryo_moveit_SERVICE_FILES "/home/nina/ws_unity/src/robots_start/srv/MoverService.srv")
